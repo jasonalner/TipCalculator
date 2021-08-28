@@ -3,15 +3,29 @@
 * {
     box-sizing: border-box;
     font-family: 'Space Mono', monospace;
-
+    border:none;
+    font-size: 24px;
 }
+
 html, body {
     margin: 0 auto; 
     background-color: hsl(185, 41%, 84%);
     text-align: center;
 }
 
+.logo {
+    margin: 40px
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
 .container {
+    margin: 0 auto;
     display:flex;
     flex-direction: column;
     max-width: 375px;
@@ -20,27 +34,121 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: left;
-
+    border-radius: 25px;
 }
+
 .tip-selector {
     margin: 0 auto;
     width:100%;
 }
 
-.bill-input {
-    width:100%;
-    height:59px;
+.input-container {
+    width: 100%;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    padding-left:10px;
+    margin: 10px 0;
 }
+
+.input {
+    text-align:right;
+    padding-right: 10px;
+    font-weight: 700;
+    width:90%;
+}
+
 .buttons {
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
-button {
+.tip {
     height:50px;
-    width:50%;
+    width:48%;
     padding: 0;
-    margin: 0;
+    margin: 10px 0px;
+    background: hsl(183, 100%, 15%);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.tip:hover {
+    cursor: pointer;
+    background: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+
+.btn-active {
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.custom {
+    width: 48%;
+    height:50px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight:700;
+    padding-right:20px;
+}
+
+.custom:hover {
+    border:hsl(172, 67%, 45%) 2px solid;
+}
+
+input {
+    background: hsl(189, 41%, 97%);
+    color: hsl(184, 14%, 56%);
+    text-align: right;
+}
+
+p {
+    font-size: 14px;
+    margin:0;
+}
+
+.error-msg {
+    color: indianred;
+    font-weight:700;
+    opacity: 0;
+}
+
+.show-error-msg {
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+.tip-result {
+    background:hsl(183, 100%, 15%);
+    width:100%;
+    padding: 22px;
+    border-radius: 10px;
+}
+
+.white {
+    color: #fff;
+}
+
+.tip-result span {
+    font-size: 14px;
+    color:hsl(184, 14%, 56%)
+}
+
+.result-container {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.total {
+    font-size: 30px;
+    color:#27C2AD;
+}
+
+.reset {
+    width: 100%;
+    background:hsl(172, 67%, 45%);
 }

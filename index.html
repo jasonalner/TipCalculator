@@ -15,39 +15,57 @@
   </style>
 </head>
 <body>
-    <img src="images/logo.svg">
+    <img class="logo" src="images/logo.svg">
     <div class="container"> 
         <div class="tip-selector">
             <div class="bill">
-                Bill
-                <input class="bill-input" type="number">
+                <p>Bill</p>
+                <div class="input-container">   
+                    <img src="images/icon-dollar.svg">
+                    <input id="bill-input" class="input" type="number" placeholder="0" min="0">
+                </div>
             </div>
             <div class="select-tip">
-                Select Tip %
+                <p>Select Tip %</p>
                 <div class="buttons">
-                    <button>5%</button>
-                    <button>10%</button>
-                    <button>15%</button>
-                    <button>25%</button>
-                    <button>50%</button>
-                    <button>Custom</button>
-
+                    <button id="five-pc" class="tip">5%</button>
+                    <button id="ten-pc" class="tip">10%</button>
+                    <button id="fifteen-pc" class="tip btn-active">15%</button>
+                    <button id="twentyfive-pc" class="tip">25%</button>
+                    <button id="fifty-pc" class="tip">50%</button>
+                    <input id="custom-pc" class="custom tip" type="number" placeholder="Custom" min="0">
                  </div>
-]            </div>
-            <div class="number-people">
-                Number of People
+            </div>
+            <div class="flex">
+                <p>Number of People</p>
+                <p class="error-msg">Can't be zero</p>
+            </div>
+            <div class="input-container">
+                <img src="images/icon-person.svg">
+                <input id="people-input" class="input" type="number" placeholder="0">
             </div>
         </div>
+
         <div class="tip-result">
-            <div class="tip-amount">
-                Tip Amount
-                / person
+            <div class="result-container">
+                <div>
+                    <p class="white">Tip Amount <br>
+                    <span>/ person</span></p>
+                </div>
+                <div>
+                    <p id="tip-amount-total" class="total">$1.00</p>
+                </div>
             </div>
-            <div class="total">
-                Total
-                / person
+            <div class="result-container">
+                <div>
+                    <p class="white">Total <br>
+                    <span>/ person</span></p>
+                </div>
+                <div>
+                    <p class="total">1.00</p>
+                </div>
             </div>
-            <button class="reset">Reset</button>
+            <button id="reset" class="reset" onclick="resetCalc()">Reset</button>
         </div>
     </div>
   

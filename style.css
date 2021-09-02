@@ -28,6 +28,7 @@ html, body {
     margin: 0 auto;
     display:flex;
     flex-direction: column;
+    min-width: 375px;
     max-width: 375px;
     padding:32px;
     background-color: #fff;
@@ -144,7 +145,7 @@ p {
 }
 
 .total {
-    font-size: 30px;
+    font-size: 36px;
     color:#27C2AD;
 }
 
@@ -153,18 +154,19 @@ p {
     background:hsl(172, 67%, 45%);
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 400px) {
     .container {
         min-width: 920px;
         height: 480px;
         flex-direction: row;
     }
-.tip-selector {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-evenly;
-}
+
+    .tip-selector {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-evenly;
+    }
     .tip-result {
         height: 100%;
         display: flex;
@@ -177,4 +179,9 @@ p {
     .tip { 
         width: 30%;
     }
+  }
+
+  .attribution, a {
+      margin-top:20px;
+      font-size: 10px;
   }
